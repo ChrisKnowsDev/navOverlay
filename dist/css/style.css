@@ -1,0 +1,118 @@
+/* css vars */
+:root {
+  --color-primary: red;
+  --color-dark: #333;
+  --color-light: #fff;
+}
+
+/* base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* utility classes */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.m-heading {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* main nav */
+#main-nav {
+  border-bottom: 2px solid var(--color-light);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+#main-nav i {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#main-nav i:hover {
+  transform: rotate(90deg);
+  color: var(--color-primary);
+}
+
+#main-nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* nav overlay */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* hide until we need it */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-overlay a {
+  color: var(--color-light);
+}
+
+.nav-overlay li {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-overlay li:hover {
+  letter-spacing: 2px;
+  transform: scale(1.1);
+}
+
+/* footer */
+#main-footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 2px solid var(--color-light);
+  margin-top: 1rem;
+}
