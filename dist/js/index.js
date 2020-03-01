@@ -1,11 +1,6 @@
 const navIcon = document.querySelector('#main-nav i');
 const navOverlay = document.querySelector('.nav-overlay');
 const navLinks = document.querySelectorAll('.nav-overlay a');
-const sections = document.querySelectorAll('section');
-
-sections.forEach(section => {
-  section.scrollIntoView({behavior: "smooth"});
-})
 
 navIcon.addEventListener('click', () => navOverlay.classList.add('open'));
 
